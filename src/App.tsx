@@ -1,12 +1,13 @@
 import { useState } from "react";
 
 function App() {
-  // useStates => Hooks
-  // useState는 가자 기본적인 Hook이며, 함수 컨포넌트에서도 가변적인 상태를 지닐 수 있게 해준다.
+  // useStates => Hooks 커스텀으로 만든 함수의 집합
+  // useState는 가장 기본적인 Hook이며, 함수 컨포넌트에서도 가변적인 상태를 지닐 수 있게 해준다.
   // => 이 함수가 호출되면 배열을 반환한다 => 첫 번째 요소는 상태 값, 두 번째 요소는 상태를 설정하는 함수
   // => useState 함수의 파라미터에는 상태의 기본값을 넣어 줍니다.
   // const [alphabet, setAlphabet] = useState<String>("");
 
+  // State 앞에 ()이 없으면 초깃값을 담을 수가 없음으로 무조건 ()을 달아야함
   const [value, setValue] = useState<number>(0);
   const [name, setName] = useState<string>("");
   const [nickname, setNickname] = useState<string>("");
@@ -38,7 +39,7 @@ function App() {
 
         <div>
           <b>이름: {name}</b>
-          <b>slrspdla: {nickname}</b>
+          <b>닉네임: {nickname}</b>
         </div>
     </div>
     
